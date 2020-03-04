@@ -1,0 +1,34 @@
+    #include <stdio.h>
+    int main() {
+        int operator;
+        int first, second;
+	int a=1;
+	while(a==1)
+	{
+        printf("Enter an operator (1.add, 2.subtract, 3.multiply, 4.Divide): ");
+        scanf("%d", &operator);
+        printf("Enter two operands: ");
+        scanf("%d %d", &first, &second);
+        switch (operator) {
+        case 1:
+            printf("%d + %d = %d", first, second, first + second);
+            break;
+        case 2:
+            printf("%d - %d = %d", first, second, first - second);
+            break;
+        case 3:
+            printf("%d * %d = %d", first, second, first * second);
+            break;
+        case 4:
+            printf("%d / %d = %d", first, second, first / second);
+            break;
+            // operator doesn't match any case constant
+        default:
+            printf("Error! operator is not correct");
+        }printf("\n");
+	printf("Want to repeat 1,0    ");
+	scanf("%d",&a);
+	printf("\n");
+	}
+        return 0;
+    }
